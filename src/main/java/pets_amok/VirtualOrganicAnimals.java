@@ -1,17 +1,11 @@
 package pets_amok;
 
-/* Encapsulate all instance variables.
- *Assign appropriate visibility modifiers to methods only used internally by a class or within a class hierarchy.
- *Organic pets have their health decreased by unclean circumstances, and by thirst or hunger growing too high.
- *
- */
 public class VirtualOrganicAnimals extends VirtualPet {
     //Fields
     protected int cleanliness;
     protected int hunger;
     protected int thirst;
 
-    //Constructor
     public VirtualOrganicAnimals(String name, String description, int unhappy, int boredom, int healthRisk, int tiredness, int cleanliness, int hunger, int thirst) {
         super(name, description, unhappy, boredom, healthRisk, tiredness);
         this.cleanliness = cleanliness;
@@ -19,7 +13,6 @@ public class VirtualOrganicAnimals extends VirtualPet {
         this.thirst = thirst;
     }
 
-    //Update Methods
     public void eat(int feed) {
         hunger -= feed;
         if (hunger < 0) {
@@ -50,7 +43,6 @@ public class VirtualOrganicAnimals extends VirtualPet {
         CallFieldsFromVP();
     }
 
-    //Getters
     public int getCleanliness() {
         return cleanliness;
     }
@@ -63,8 +55,6 @@ public class VirtualOrganicAnimals extends VirtualPet {
         return thirst;
     }
 
-
-    //Tick
     @Override
     public void tick() {
         super.tick();

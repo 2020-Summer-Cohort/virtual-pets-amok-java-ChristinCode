@@ -1,29 +1,5 @@
 package pets_amok;
 
-/* Encapsulate all instance variables.
-*Assign appropriate visibility modifiers to methods only used internally by a class or within a class hierarchy.
-* include instance variables representing:
--name (from the above example, this might be "Tommy")
--description (from the above example, this might be "smells like a Stargazer lily fresh with morning dew")
-*include a constructor that accepts a name and description
-*include a constructor that, in addition to name and description, accepts default values for the pet's attributes (hunger, boredom, etc)
-*Do not include a default (zero arguments) constructor.
-*create a model that allows for dogs and cats, either of which may be robotic
-*introduce an attribute (instance variable) representing overall health that
-updated as a result of other attributes moving in a negative or positive
-direction, influencing happiness
-*introduce methods that allow for:
--oiling robotic pets
-- walking dogs, decreasing the likelihood that organic dogs will soil their
-cages, while increasing happiness in all dogs
-*do not allow:
--feeding/watering robotic pets
- -oiling organic pets
- *modify the tick method to return a value indicating the amount of waste a pet
-creates, which should contribute to either (optionally, create accessor methods
-to retrieve these values instead):
-*amount of waste in an individual dog cage
-  */
 public class VirtualPet {
 
     private String name;
@@ -137,6 +113,5 @@ public class VirtualPet {
         if (tiredness > 100) {
             tiredness = 100;
         }
-
     }
 }

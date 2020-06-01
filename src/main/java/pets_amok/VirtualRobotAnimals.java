@@ -9,13 +9,11 @@ public class VirtualRobotAnimals extends VirtualPet {
     //Fields
     protected int maintenance;
 
-    //Constructor
     public VirtualRobotAnimals(String name, String description, int unhappy, int boredom, int healthRisk, int tiredness, int maintenance) {
         super(name, description, unhappy, boredom, healthRisk, tiredness);
         this.maintenance = maintenance;
     }
 
-    //Update Methods
     public void oil(int oiling) {
         maintenance -= oiling;
         if (maintenance < 0) {
@@ -26,12 +24,10 @@ public class VirtualRobotAnimals extends VirtualPet {
         CallFieldsFromVP();
     }
 
-    //Getters
     public int getMaintenance() {
         return maintenance;
     }
 
-    //tick
     @Override
     public void tick() {
         super.tick();
@@ -39,7 +35,6 @@ public class VirtualRobotAnimals extends VirtualPet {
         if (maintenance > 100) {
             maintenance = 100;
         }
-
     }
 
     private void CallFieldsFromVP() {
